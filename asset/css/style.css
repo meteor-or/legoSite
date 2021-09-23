@@ -8,6 +8,7 @@ body {
   transition: background-color 0.35s;
   background-color: #3e00ff;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 ::-moz-selection {
   color: var(--changing);
@@ -40,6 +41,10 @@ a {
   padding-right: 10px;
   transition: 0.35s;
 }
+.gnbItem a {
+  display: block;
+  -webkit-text-stroke: 1px #000;
+}
 .gnbItem:hover {
   transform: rotate(30deg);
 }
@@ -57,7 +62,6 @@ img[alt="logo"] {
 .gnb {
   display: flex;
   color: #ffffae;
-  /* -webkit-text-stroke: 1px #000; */
   text-shadow: 4px 4px 0 #000;
 }
 /**** main ****/
@@ -119,27 +123,22 @@ img[alt="logo"] {
   overflow: hidden;
   position: relative;
 }
-.policeHeading {
+.heading {
   width: fit-content;
-  font-size: 13rem;
+  font-size: 8rem;
   white-space: nowrap;
   z-index: 1;
   color: #000;
-  font-family: "cooper-black-std";
+  font-family: "cooper-black-std", sans-serif;
   background-color: #fff338;
   -webkit-text-stroke: 8px #3e00ff;
-  border: 10px solid #000;
+  border-top: 10px solid #000;
+  border-bottom: 10px solid #000;
 
   margin: 0;
-  animation: headingInfinite 30s infinite linear;
 }
-@keyframes headingInfinite {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.headingTxt {
+  /* animation: headingInfinite 30s infinite linear; */
 }
 .gridBox {
   padding: 80px;
@@ -198,6 +197,13 @@ img[alt="policeTruck"] {
 .aniArticle {
   padding: 20px;
 }
+.underline {
+  width: 90%;
+  height: 3px;
+  border: 1px solid #000;
+  background-color: #efa500;
+  margin: 0 auto;
+}
 .aniHeading {
   font-family: "Sylfaen", sans-serif;
   -webkit-text-stroke: 2px #000;
@@ -206,13 +212,7 @@ img[alt="policeTruck"] {
   font-size: 8rem;
   margin: 20px 0;
 }
-.underline {
-  background-color: #efa500;
-  border: 1px solid #000;
-  width: 90%;
-  margin: 0 auto;
-  height: 3px;
-}
+
 .animationItem {
   border-top: 2px solid #000;
   padding: 50px 0;
@@ -256,7 +256,7 @@ img[alt="policeTruck"] {
 
 .product {
   position: relative;
-  padding: 5% 0;
+  padding: 200px 0;
 }
 .txt2 {
   color: #fff;
@@ -264,16 +264,18 @@ img[alt="policeTruck"] {
   text-shadow: 4px 4px 0 #000;
   text-align: center;
   font-size: 5rem;
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 .flexbox {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .container {
   display: grid;
   grid-template: 1fr / 1fr 2fr 1fr;
+  margin-bottom: 100px;
 }
 .aside {
   display: flex;
@@ -291,25 +293,9 @@ img[alt="policeTruck"] {
   transform: rotate(270deg) scaleX(-1);
   animation: handRight 0.6s infinite ease-out alternate;
 }
-@keyframes handRight {
-  from {
-    margin-right: 0;
-  }
-  to {
-    margin-right: 100px;
-  }
-}
 .rightAside img[alt="hand"] {
   transform: rotate(270deg) scale(-1);
   animation: handLeft 0.6s infinite ease-out alternate;
-}
-@keyframes handLeft {
-  from {
-    margin-left: 0;
-  }
-  to {
-    margin-left: 100px;
-  }
 }
 .circlrOutline {
   border: 1px solid #000;
@@ -327,7 +313,11 @@ img[alt="policeTruck"] {
   z-index: 32;
   width: 80%;
   margin: 0 auto;
+  transition: all 1s;
 }
+/* .circleWrap img:hover {
+  width: 90%;
+} */
 .circleWrap .imgShadow {
   width: 80%;
   height: 100px;
@@ -379,7 +369,7 @@ img[alt="policeTruck"] {
   color: #fff;
   margin: 0;
   font-size: 4rem;
-  background: linear-gradient(to right top, #fffb55, #b6ff2a);
+  background: linear-gradient(to top, #fffb55, #85d2ff);
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -387,6 +377,118 @@ img[alt="policeTruck"] {
   color: #fff;
   margin: 0;
   font-size: 2rem;
+}
+.productWrap {
+  width: 100%;
+  color: #fff;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px #6e12d2;
+}
+.txt4 {
+  margin-left: 10%;
+  font-size: 4rem;
+  -webkit-text-stroke: 2px #39323f;
+  text-shadow: 4px 4px 0 #000;
+  margin-bottom: 20px;
+}
+.frameLine {
+  height: 7px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
+  background: #85d2ff;
+}
+.frameImg {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: #fff338
+    url(https://pumper.thisismailan.com/assets/images/frame-pattern.svg)
+    repeat-x 0 0;
+  animation: line 100s infinite linear;
+  transform: translateZ(0);
+}
+.productList {
+  display: flex;
+  height: auto;
+  overflow: hidden;
+  font-size: 1.3rem;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+}
+/* .productList.active {
+  
+  height: auto;
+} */
+.commonProduct {
+  display: flex;
+  text-align: center;
+}
+.productSwiperWarp {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background-color: #6e12d2;
+}
+.hand {
+  cursor: pointer;
+  display: none;
+}
+.hand img {
+  width: 100%;
+  display: block;
+}
+.leftHand {
+  transform: rotate(90deg) scaleX(-1);
+  margin-left: 40px;
+}
+.rightHand {
+  transform: rotate(270deg);
+  margin-right: 40px;
+}
+.productItem {
+  width: 20%;
+}
+.productImgBox {
+  height: 350px;
+  overflow: hidden;
+  display: block;
+  padding-top: 20px;
+}
+.productItem img {
+  width: 100%;
+  display: block;
+  transition: all 0.35s;
+  margin: 0 auto;
+}
+.productItem img:hover {
+  width: 110%;
+}
+.priceBox {
+  padding: 20px 0;
+}
+.productTitle {
+  width: fit-content;
+  margin-top: 10px;
+  border-bottom: 2px solid rgb(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #000;
+  margin: 0 auto;
+  font-size: 2.1rem;
+}
+.productTitle:hover {
+  border-bottom: 2px solid #fff;
+  width: fit-content;
+  margin: 0 auto;
+}
+.productPrice {
+  padding: 20px 0;
+  -webkit-text-stroke: 1px #000;
+  font-size: 1.2rem;
 }
 
 /* footer */
@@ -396,25 +498,73 @@ img[alt="policeTruck"] {
 }
 
 .contents {
-  font-family: "cooper-black-std";
+  font-size: 1;
   width: 80%;
   margin: 0 auto;
   padding: 100px 0;
-  color: #ffffae;
+  color: ##fffce6;
+  -webkit-text-stroke: 1px #39323f;
+  font-size: 1.2rem;
+  transform: translateY(1px);
 }
 .emailSetion {
-  font-style: 1rem;
+  font-style: 0.8rem;
   padding-bottom: 100px;
 }
 .emailSetion .myemail {
   font-size: 2rem;
 }
-.footerWrap {
-  padding-top: 10px;
+.logoBox {
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #ffffae;
+  border-top: 1px solid #fffce6;
 }
 .footerlogo img {
   width: 50px;
+}
+.copyright {
+  font-size: 1rem;
+}
+.searchWrap {
+  display: none;
+}
+/* keyframes */
+
+@keyframes headingInfinite {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes handRight {
+  from {
+    margin-right: 0;
+  }
+  to {
+    margin-right: 100px;
+  }
+}
+@keyframes handLeft {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 100px;
+  }
+}
+@keyframes line {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.text {
+  width: 100px;
+  height: 100px;
 }

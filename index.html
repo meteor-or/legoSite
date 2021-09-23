@@ -20,7 +20,7 @@
   <meta property="og:title" content="이유성 | 레고 포토폴리오">
   <meta property="og:description" content="레고 포토폴리오 사이트입니다">
   <meta property="og:image" content="asset/img/legoRed.png">
-  <meta property="og:url" content="#">
+  <meta property="og:url" content="https://legopfsite.netlify.app/">
 
   <!-- webfont -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,14 +33,13 @@
   <link rel="stylesheet" href="asset/css/normalize.css">
   <link rel="stylesheet" href="asset/css/jquery.mb.YTPlayer.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="stylesheet" href="asset/css/locomotive-scroll.min.css">
   <link rel="stylesheet" href="asset/css/style.css">
 
   <!-- js -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="asset/src/jquery.mb.YTPlayer.min.js"></script>
-  <script src="asset/src/locomotive-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.js?ver=5.3.2"></script>s
 
 </head>
 
@@ -48,7 +47,7 @@
   <div class="wrap">
     <header id="header">
       <h1 class="logo">
-        <a href="#">
+        <a href="https://www.lego.com/ko-kr/" target=”_blank”>
           <img src="asset/img/legoLogo.png" alt="logo">
         </a>
       </h1>
@@ -81,13 +80,13 @@
           </div>
         </li>
         <li data-bgcolor="#3E00FF" class="cityPolice bg-changer">
-
           <div class="legoHeadImg"></div>
           <div class="dashedBox">
             <article class="mainarticle">
-              <h2 class="policeHeading">
-                LEGO CITY POLICE LEGO CITY POLICE LEGO CITY POLICE
-                <span class="underline"></span>
+              <h2 class="heading">
+                <div class="headingTxt ezkorry-roller">
+                  <span>LEGO CITY POLICE </span>
+                </div>
               </h2>
               <div class="gridBox">
                 <div data-aos="fade-in" data-aos-duration="1000" class="leftTxt">
@@ -108,8 +107,15 @@
                   추격전을 펼쳐 보세요!
                 </div>
               </div>
+              
+              <h2 class="heading">
+                <div class="headingTxt ezkorry-roller">
+                  <span>LEGO CITY POLICE </span>
+                </div>
+              </h2>
             </article>
           </div>
+          
         </li>
         <li data-bgcolor="#efa500" class="animation bg-changer">
           <div class="solidBox">
@@ -122,7 +128,7 @@
               </h2>
               <ul class="animationList">
                 <li data-aos="fade-up" class="animationItem">
-                  <a href="#">
+                  <a href="https://www.youtube.com/watch?v=K527oNxtO7o&t=68s">
                     <div class="sumnail">
                       <img src="asset/img/sumnail1.png" alt="sumnail1">
                     </div>
@@ -136,7 +142,7 @@
                   </a>
                 </li>
                 <li data-aos="fade-up" class="animationItem">
-                  <a href="#">
+                  <a href="https://www.youtube.com/watch?v=xjPRNkym42I&list=PLov2--o_rMRK2gHB3o5ZQnkWcI1EJq5ty&index=41">
                     <div class="sumnail">
                       <img src="asset/img/sumnail2.png" alt="sumnail2">
                     </div>
@@ -152,6 +158,7 @@
               </ul>
             </article>
           </div>
+          
         </li>
         <li data-bgcolor="#9541ef" class="product bg-changer">
 
@@ -180,14 +187,85 @@
                   <h3 class="legoTitle">레고 폴리스</h3>
                   <p class="subTitle">헬리콥터 추격전</p>
                 </div>
-
               </div>
               <aside class="aside rightAside">
                 <img src="asset/img/block.svg" alt="yelloBlock">
                 <img src="asset/img/down_hand.svg" alt="hand">
                 <img src="asset/img/block.svg" alt="yelloBlock">
               </aside>
+              
             </div>
+            <div class="productWrap">
+              <div class="commonProduct">
+                <div data-aos="fade-right" data-aos-duration="1000" class="txt4">
+                  더 많은 상품이 궁금하다면?
+                </div>
+                <div class="searchWrap">
+                  <input type="text" placeholder="레고를 검색해보세요!" name="" id="searchBox">
+                  <button class="searchBtn">검색</button>
+                  <div class="searchTitle"></div>
+                  <div class="searchContents"></div>
+                  <div class="searchUrl"></div>
+                </div>
+
+              </div>
+              <div class="frame">
+                <div class="frameLine"></div>
+                <div class="frameImg"></div>
+                <div class="frameLine"></div>
+              </div>
+              <div class="productSwiperWarp">
+                <div class="hand leftHand">
+                  <img src="asset/img/down_hand.svg" alt="swiperHand">
+                </div>
+                <ul class="productList">
+              <li class="productItem">
+                <a class="productImgBox" target=”_blank” href="https://www.lego.com/ko-kr/product/police-station-60246">
+                  <img src="asset/img/product2.png" alt="product2">
+                </a>
+                <div class="priceBox">
+                  <a class="productTitle" target=”_blank” href="https://www.lego.com/ko-kr/product/police-station-60246">레고 시티 경찰서</a>
+                  <div class="productPrice">129,900</div>
+                </div>
+              </li>
+              <li class="productItem">
+                <a class="productImgBox" target=”_blank” href="https://www.lego.com/ko-kr/product/police-helicopter-transport-60244">
+                  <img src="asset/img/product3.png" alt="product3">
+                </a>
+                <div class="priceBox">
+                  <a class="productTitle" target=”_blank” href="https://www.lego.com/ko-kr/product/police-helicopter-transport-60244">경찰 헬리콥터 운송트럭</a>
+                  <div class="productPrice">64,900</div>
+                </div>
+              </li>
+              <li class="productItem">
+                <a class="productImgBox" target=”_blank” href="https://www.lego.com/ko-kr/product/police-monster-truck-heist-60245">
+                  <img src="asset/img/product2.png" alt="">
+                </a>
+                <div class="priceBox">
+                  <a class="productTitle" target=”_blank” href="https://www.lego.com/ko-kr/product/police-monster-truck-heist-60245">경찰과 몬스터 트럭 강도</a>
+                  <div class="productPrice">74,900</div>
+                </div>
+              </li>
+              <li class="productItem">
+                <a class="productImgBox" target=”_blank” href="https://www.lego.com/ko-kr/product/police-prisoner-transport-60276">
+                  <img src="asset/img/product3.png" alt="">
+                </a>
+                <div class="priceBox">
+                  <a class="productTitle" target=”_blank” href="https://www.lego.com/ko-kr/product/police-prisoner-transport-60276">경찰 죄수 호송차</a>
+                  <div class="productPrice">29,900</div>
+                </div>
+              </li>
+                </ul>
+                <div class="hand rightHand">
+                <img src="asset/img/down_hand.svg" alt="rightHand">
+                </div>
+              </div>
+              <div class="frame">
+                <div class="frameLine"></div>
+                <div class="frameImg"></div>
+                <div class="frameLine"></div>
+              </div>
+            </div>  
           </div>
         </li>
       </ul>
@@ -197,23 +275,20 @@
       <div class="contents">
         <div class="emailSetion">
           포토폴리오가 마음에 들었다면?<br>
-          <span class="myemail"><a href="mailto:leonjelly2@naver.com">leonjelly2@naver.com</a></span>
+          <span class="myemail"><a target=”_blank” href="mailto:leonjelly2@naver.com">leonjelly2@naver.com</a></span>
         </div>
+        <a href="#" class="pf">
+          다른 포트폴리오도 보러가기
+        </a>
         <div class="line"></div>
-        <div class="footerWrap">
+        <div class="logoBox">
           <div class="footerlogo">
             <img src="asset/img/legoRed.png" alt="legoRed">
           </div>
-          <div class="copyright">Copyright © 2021 Vroom! Obstacle Racing. All rights reserved.</div>
-        </div>
-        <div class="searchWrap">
-          <input type="text" placeholder="레고를 검색해보세요!" name="" id="searchBox">
-          <button class="searchBtn">검색</button>
-          <div class="searchTitle"></div>
-          <div class="searchContents"></div>
-          <div class="searchUrl"></div>
+          <div class="copyright">Copyright © 2021 Leeyuseong. All rights reserved.</div>
         </div>
       </div>
+      <img class="text" src="https://postfiles.pstatic.net/MjAyMTA4MjhfMTc3/MDAxNjMwMTUyMTY2MjU0.UutnHH0rHV3FK7PerNNdMeUQ_oeyeifkWv1pGCApjisg.ZAas2sJCL2wrureWbZIXMMv34gc-WRCzR_jNipz6zW4g.PNG.dydtlska/SE-61465e2e-2c34-428f-8072-0756db1acbb1.png?type=w966" alt="produuuuct">
     </footer>
   </div>
 
