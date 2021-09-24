@@ -100,36 +100,6 @@ $('.searchBtn').click(function(){
 });
 
 //api로 상품 이미지 가져오기
-$.ajax({
-  method: "GET",
-  url: "https://dapi.kakao.com/v2/search/image",
-  data: { query :  '레고시티 경찰서' },
-  headers: {Authorization : "KakaoAK 17194e8da000acd54324eeff27f5ca14"}
-})
-  .done(function (msg) {
-    console.log( $('.productItem').eq(0).find('.productImgBox img'));
-    $('.productItem').eq(0).find('.productImgBox img').attr({src:msg.documents[0].image_url});
-  });
-  $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v2/search/image",
-    data: { query :  '레고 헬리콥터 운송트럭' },
-    headers: {Authorization : "KakaoAK 17194e8da000acd54324eeff27f5ca14"}
-  })
-    .done(function (msg) {
-      console.log( $('.productItem').eq(0).find('.productImgBox img'));
-      $('.productItem').eq(1).find('.productImgBox img').attr({src:msg.documents[2].image_url});
-    });
-  $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v2/search/image",
-    data: { query :  '레고 경찰과 몬스터 트럭 강도' },
-    headers: {Authorization : "KakaoAK 17194e8da000acd54324eeff27f5ca14"}
-  })
-    .done(function (msg) {
-      console.log( $('.productItem').eq(0).find('.productImgBox img'));
-      $('.productItem').eq(2).find('.productImgBox img').attr({src:msg.documents[0].image_url});
-    });
   $.ajax({
     method: "GET",
     url: "https://dapi.kakao.com/v2/search/image",
@@ -137,10 +107,26 @@ $.ajax({
     headers: {Authorization : "KakaoAK 17194e8da000acd54324eeff27f5ca14"}
   })
     .done(function (msg) {
-      console.log( $('.productItem').eq(0).find('.productImgBox img'));
-      $('.productItem').eq(3).find('.productImgBox img').attr({src:msg.documents[5].image_url});
+      $('img[alt=promotion]').attr({src:msg.documents[5].image_url});
     });
+//json으로 가져오기
+$.ajax({
+  url: "legolist.json",
+  dataType: "json",
+  success : function(data){
+    if(data.length> 0) {
+      for(let i in data) {
+        let title = data[i].title;
+        let price = data[i].price;
+        let url = data[i].url;
 
+        $(".productItem").eq(i).find(".productImgBox img").attr({src:data[i].url});
+        $(".productItem").eq(i).find(".productTitle").text(data[i].title);  
+        $(".productItem").eq(i).find(".productPirce").text(data[i].price); 
+      }
+    }
+  }
+});
 
 // 돌아가는 텍스트
 

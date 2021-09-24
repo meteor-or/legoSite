@@ -311,30 +311,31 @@ img[alt="policeTruck"] {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  padding: 100px;
 }
-.circleWrap img {
-  position: relative;
-  z-index: 32;
-  width: 80%;
-  margin: 0 auto;
-  transition: all 1s;
-}
-/* .circleWrap img:hover {
-  width: 90%;
-} */
-.circleWrap .imgShadow {
+/* .circleWrap .imgShadow {
   width: 80%;
   height: 100px;
   border-radius: 50%;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
   position: relative;
-  top: -100px;
+  top: -50px;
   z-index: 30;
   transform: rotate(-5deg);
+} */
+img[alt="promotion"]{
+  border: 2px solid #000;
+  padding: 10px;
+  background-color: #85d2ff;
+  width: 80%;
+  margin: 0 auto;
 }
-
 /* tag */
+.center{
+  display: flex;
+  flex-direction: column;
+}
 .priceTag {
   width: 240px;
   height: 80px;
@@ -343,8 +344,7 @@ img[alt="policeTruck"] {
   border: 1px solid #000;
   display: flex;
   align-items: center;
-  right: 0;
-  margin: 0 auto;
+
 }
 .priceHole {
   width: 1.5rem;
@@ -368,6 +368,7 @@ img[alt="policeTruck"] {
   -webkit-text-stroke: 1px #39323f;
   top: -40px;
   border: 1px solid #000;
+  padding: 20px 0;
 }
 .nameTag .legoTitle {
   color: #fff;
