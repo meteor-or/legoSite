@@ -326,15 +326,12 @@ img[alt="policeTruck"] {
 } */
 img[alt="promotion"]{
   border: 2px solid #000;
-  padding: 10px;
-  background-color: #85d2ff;
   width: 80%;
   margin: 0 auto;
+  c
 }
 /* tag */
 .center{
-  display: flex;
-  flex-direction: column;
 }
 .priceTag {
   width: 240px;
@@ -344,14 +341,19 @@ img[alt="promotion"]{
   border: 1px solid #000;
   display: flex;
   align-items: center;
-
+  top: 20%;
+}
+.tagleft .priceTxt{
+  margin-left: 40px;
+}
+.tagleft .priceHole{
 }
 .priceHole {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
   background-color: #9541ef;
-  margin: 0 20px 0 20px;
+  margin: 0 20px;
   border: 1px solid #000;
 }
 .priceTxt {

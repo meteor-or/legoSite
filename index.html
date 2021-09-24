@@ -53,9 +53,9 @@
       </h1>
       <nav>
         <ul class="gnb">
-          <li class="gnbItem"><a href="#">CITY POLICE</a></li>
-          <li class="gnbItem"><a href="#">ANIMAION</a></li>
-          <li class="gnbItem"><a href="#">PRODUCT</a></li>
+          <li class="gnbItem"><a href="#cityPolice">CITY POLICE</a></li>
+          <li class="gnbItem"><a href="#animation">ANIMAION</a></li>
+          <li class="gnbItem"><a href="#product">PRODUCT</a></li>
         </ul>
       </nav>
     </header>
@@ -80,7 +80,7 @@
             <img src="asset/img/down_hand.svg" alt="downHand">
           </div> -->
         </li>
-        <li data-bgcolor="#3E00FF" class="cityPolice bg-changer">
+        <li data-bgcolor="#3E00FF" id="cityPolice"  class="cityPolice bg-changer">
           <div class="legoHeadImg"></div>
           <div class="dashedBox">
             <article class="mainarticle">
@@ -118,7 +118,7 @@
           </div>
           
         </li>
-        <li data-bgcolor="#efa500" class="animation bg-changer">
+        <li data-bgcolor="#efa500" id="animation" class="animation bg-changer">
           <div class="solidBox">
             <div data-aos="fade-right" data-aos-duration="1000" class="descTxt">레고 시티의 대표 시리즈 경찰을 애니메이션으로도 만날 수 있어요!
               국내에서는 유튜브을 포함해서 투니버스, 니켈로디언, 카툰네트워크 채널 등에서 볼 수 있답니다.</div>
@@ -161,7 +161,7 @@
           </div>
           
         </li>
-        <li data-bgcolor="#9541ef" class="product bg-changer">
+        <li data-bgcolor="#9541ef" id="product" class="product bg-changer">
 
           <div data-aos="fade-up" data-aos-duration="1000" class="txt2">
             레고 시티를 직접 즐기고 싶다면?
@@ -169,19 +169,18 @@
           <div class="flexbox">
             <div class="container">
               <aside class="aside leftAside">
-                <img src="asset/img/block.svg" alt="yelloBlock">
+                <div class="priceTag tagleft">
+                  <div class="priceTxt">129,000</div>
+                  <div class="priceHole"></div>
+                </div>
                 <img src="asset/img/down_hand.svg" alt="hand">
                 <img src="asset/img/block.svg" alt="yelloBlock">
               </aside>
               <div class="center">
-                <div class="priceTag">
-                  <div class="priceHole"></div>
-                  <div class="priceTxt">129,000</div>
-                </div>
                 <div class="circlrOutline">
-                  <div class="circleWrap">
+                  <a class="circleWrap" href="https://www.lego.com/ko-kr/product/police-prisoner-transport-60276">
                     <img data-aos="zoom-in" data-aos-duration="1000" src="asset/img/product1.png" alt="promotion">
-                  </div>
+                  </a>
                 </div>
                 <div class="nameTag">
                   <h3 class="legoTitle">레고 폴리스</h3>
@@ -189,7 +188,10 @@
                 </div>
               </div>
               <aside class="aside rightAside">
-                <img src="asset/img/block.svg" alt="yelloBlock">
+                <div class="priceTag">
+                  <div class="priceHole"></div>
+                  <div class="priceTxt">129,000</div>
+                </div>
                 <img src="asset/img/down_hand.svg" alt="hand">
                 <img src="asset/img/block.svg" alt="yelloBlock">
               </aside>
