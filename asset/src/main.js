@@ -120,9 +120,9 @@ $.ajax({
         let price = data[i].price;
         let url = data[i].url;
 
-        $(".productItem").eq(i).find(".productImgBox img").attr({src:data[i].url});
-        $(".productItem").eq(i).find(".productTitle").text(data[i].title);  
-        $(".productItem").eq(i).find(".productPirce").text(data[i].price); 
+        $(".productItem").eq(i).find(".productImgBox img").attr({src:url});
+        $(".productItem").eq(i).find(".productTitle").text(title);  
+        $(".productItem").eq(i).find(".productPirce").text(price); 
       }
     }
   }
